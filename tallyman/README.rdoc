@@ -1,28 +1,21 @@
-== README
+== LivingSocial Data Engineering coding challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 1.9.3 or higher
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+* System dependencies: mysql
 
 * Database creation
 
+`rake db:create`
+
 * Database initialization
 
-* How to run the test suite
+`rake db:migrate`
 
-* Services (job queues, cache servers, search engines, etc.)
+*  to run the test suite:
 
-* Deployment instructions
+`rake test`
 
-* ...
+* to run the app:
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+`rails s`
