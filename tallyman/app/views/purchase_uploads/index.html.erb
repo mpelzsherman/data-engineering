@@ -1,0 +1,27 @@
+<h1>Listing purchase_uploads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchase_uploads.each do |purchase_upload| %>
+    <tr>
+      <td><%= purchase_upload.file %></td>
+      <td><%= link_to 'Show', purchase_upload %></td>
+      <td><%= link_to 'Edit', edit_purchase_upload_path(purchase_upload) %></td>
+      <td><%= link_to 'Destroy', purchase_upload, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Purchase upload', new_purchase_upload_path %>

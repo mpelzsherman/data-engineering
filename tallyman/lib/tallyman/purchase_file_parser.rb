@@ -1,6 +1,7 @@
 class PurchaseFileParser
 
   def create_purchases(path_to_purchase_file)
+    puts "parsing #{path_to_purchase_file}"
     File.readlines(path_to_purchase_file).each_with_index do |line, index|
       next if index == 0
       purchaser_name, item_description, item_price, purchase_count, merchant_address, merchant_name = line.split("\t")

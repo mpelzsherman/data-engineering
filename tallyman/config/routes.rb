@@ -1,11 +1,11 @@
 Tallyman::Application.routes.draw do
-  resources :purchases
+  resources :purchase_uploads, :purchases
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'purchases#index'
+  root to: 'purchase_uploads#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
