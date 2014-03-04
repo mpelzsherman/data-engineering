@@ -5,6 +5,10 @@
   <%= @purchase_upload.file %>
 </p>
 
+<p>
+  <strong>Gross Revenue:</strong>
+  <%= @purchase_upload.gross_revenue %>
+</p>
 
 <%= link_to 'Edit', edit_purchase_upload_path(@purchase_upload) %> |
 <%= link_to 'Back', purchase_uploads_path %>

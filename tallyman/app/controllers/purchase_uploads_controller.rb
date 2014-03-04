@@ -27,7 +27,7 @@ class PurchaseUploadsController < ApplicationController
   # POST /purchase_uploads.json
   def create
     @purchase_upload = PurchaseUpload.new(purchase_upload_params)
-    parse_file(File.join(Rails.root, 'public', @purchase_upload.file.to_s))
+    parse_file(File.join(Rails.root, 'public', @purchase_upload.file.to_s), @purchase_upload)
 
     respond_to do |format|
       if @purchase_upload.save
@@ -75,8 +75,8 @@ class PurchaseUploadsController < ApplicationController
       params.require(:purchase_upload).permit(:file)
     end
 
-    def parse_file(f)
+    def parse_file(f, upload)
       pfp = PurchaseFileParser.new
-      pfp.create_purchases(f)
+      pfp.create_purchases(f, upload)
     end
 end
